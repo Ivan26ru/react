@@ -11,5 +11,5 @@ app.get('/', (
 );
 
 app.listen(3000, () => {
-	console.log('My server started in http://localahost:3000');
+	console.log('My server started in http://localhost:3000/');
 })
