@@ -6,10 +6,7 @@ import {indexTemplate} from "./indexTemplate";
 const app = express();
 
 app.use('/static', express.static('../dist/client'));
-app.use(function (req, res, next) {
-	console.log('Time:', Date.now());
-	next();
-});
+
 app.get('/', (req, res) => {
 		res.send(
 			indexTemplate(ReactDOM.renderToString(Header()))
