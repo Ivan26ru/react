@@ -1,7 +1,8 @@
 import * as React from "react";
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import {Header} from "../shared/Header";
+import { hydrateRoot } from 'react-dom/client';
 
 window.addEventListener('load', () => {
-	ReactDOM.render(<Header/>, document.getElementById('react_root'));
+	hydrateRoot(document.getElementById('react_root'), <Header/>);
 })
